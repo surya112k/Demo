@@ -1,12 +1,4 @@
-#include <stdio.h>
-
-void new_acc()
+void edit()
 {
-    int i,j=500000000,k;
-    system("cls");
-    printf("This is done.");
-    for(i=0;i< j ;i++)
-    {
-        k=i;
-    }
+    
 }

@@ -2,12 +2,37 @@
 #include <windows.h>
 #include "test1.h"
 #include "test2.h"
+#include "delay.h"
 
+int i,j;
+int main_exit;
+void menu(void);
+struct date{
+    int month,day,year;
+
+    };
+struct {
+
+    char name[60];
+    int acc_no,age;
+    char address[60];
+    char citizenship[15];
+    double phone;
+    char acc_type[10];
+    float amt;
+    struct date dob;
+    struct date deposit;
+    struct date withdraw;
+
+    }add,upd,check,rem,transaction;
+
+
+/*
 void fordelay(int j)
 {   int i,k;
     for(i=0;i<j;i++)
          k=i;
-}
+}*/
 
 void close(void)
 {
@@ -22,8 +47,6 @@ void close(void)
 int main()
 {
     char pass[20],password[20]="surya";
-    int i=0,a;
-    int main_exit;
     printf("\n\n\n\n\t\tEnter the password to login:");
     scanf("%s",pass);
     if (strcmp(pass,password)==0)
@@ -37,13 +60,7 @@ int main()
             printf(".");
           }
           system("cls");
-          a=menu();
-          switch(a)
-            {
-              case 1:new_acc();
-              break;
-            }
-          system("cls");
+          menu();
           close();
         }
     else
@@ -72,4 +89,38 @@ int main()
 
         }
         return 0;
+}
+
+void menu(void)
+{
+    int choice,i,k,j =200000000;
+    system("cls");
+    system("color F0");
+    printf("\n\n\t\t\tCUSTOMER ACCOUNT BANKING MANAGEMENT SYSTEM");
+    printf("\n\n\n\t\t\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2 WELCOME TO THE MAIN MENU \xB2\xB2\xB2\xB2\xB2\xB2\xB2");
+    printf("\n\n\t\t1.Create new account\n\t\t2.Update information of existing account\n\t\t3.For transactions\n\t\t4.Check the details of existing account\n\t\t5.Removing existing account\n\t\t6.View customer's list\n\t\t7.Exit\n\n\n\n\n\t\t Enter your choice:");
+    scanf("%d",&choice);
+    printf("\nThe choice is : %d",choice);
+    for(i=0;i< j ;i++)
+    {
+        k=i;
+    }
+    system("color 07");
+    switch(choice)
+    {
+        case 1:new_acc();
+        break;
+        case 2:edit();
+        break;/*
+        case 3:transact();
+        break;
+        case 4:see();
+        break;
+        case 5:erase();
+        break;
+        case 6:view_list();
+        break;
+        case 7:close();
+        break;*/
+    }
 }
