@@ -2,9 +2,10 @@ void close(void)
 {
     system("cls");
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\tThis C Mini Project is developed by Surya.K.M");
-    for(int i=0;i<=6;i++)
+    printf("\n\t\t\t\tApplication closing");
+    for(int i=0;i<=10;i++)
     {
-      fordelay(100000000);
+      fordelay(200000000);
       printf(".");
     }
 }
