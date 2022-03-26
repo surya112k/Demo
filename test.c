@@ -3,16 +3,16 @@
 #include "test1.h"
 #include "test2.h"
 #include "delay.h"
+#include "close.h"
 
 int i,j;
 int main_exit;
 void menu(void);
-struct date{
+struct date
+{
     int month,day,year;
-
-    };
-struct {
-
+};
+struct{
     char name[60];
     int acc_no,age;
     char address[60];
@@ -23,26 +23,8 @@ struct {
     struct date dob;
     struct date deposit;
     struct date withdraw;
-
     }add,upd,check,rem,transaction;
 
-
-/*
-void fordelay(int j)
-{   int i,k;
-    for(i=0;i<j;i++)
-         k=i;
-}*/
-
-void close(void)
-{
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\tThis C Mini Project is developed by Surya.K.M");
-    for(int i=0;i<=6;i++)
-    {
-      fordelay(100000000);
-      printf(".");
-    }
-}
 
 int main()
 {
