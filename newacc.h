@@ -1,31 +1,4 @@
-void fordelay(int j);
-void close(void);
-void menu(void);
-
-int i,k,temp,choice,j;
-int main_exit;
-
-struct date{
-    int month,day,year;
-
-    };
-struct done{
-
-    char name[60];
-    int acc_no,age;
-    char address[60];
-    char citizenship[15];
-    double phone;
-    char acc_type[10];
-    float amt;
-    struct date dob;
-    struct date deposit;
-    struct date withdraw;
-
-    }add,upd,check,rem,transaction;
-
-
-void new_acc(void)
+void new_acc()
 {
     int i=0;
     FILE *ptr;
@@ -43,7 +16,7 @@ void new_acc(void)
         if (check.acc_no==add.acc_no)
             {
                 printf("Account no. already in use!");
-                fordelay(1000000000);
+                delay(1000000000);
                 goto account_no;
             }
     }

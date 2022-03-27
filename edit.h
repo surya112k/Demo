@@ -1,7 +1,4 @@
-void close(void);
-void menu(void);
-
-void edit(void)
+void edit()
 {
     int choice,test=0;
     FILE *old,*newrec;
