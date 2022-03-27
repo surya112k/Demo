@@ -1,6 +1,3 @@
-extern int i,k,temp,choice,j;
-extern int main_exit;
-
 void close(void);
 void menu(void);
 
