@@ -1,8 +1,27 @@
-#include "headers.h"
+/**
+ * @file main.c
+ * @author Surya
+ * @brief Bank Management Software
+ * @version 0.1
+ * @date 2022-04-01
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+#include "headers.h" ///< import the packages consists of header files.
 
+
+/**
+ * @brief Program starts from here main function.
+ * @brief After enter the creditional the screen goes to main page of the program.
+*/
 void main()
 {
     char pass[20],password[20]="surya";
+    const int s_width = strlen("Bank Management System");
+    const int t = GetColumnWidth();
+    const int field_width = (t - s_width) / 2 + s_width;
+    printf("%*s\n", field_width, "Bank Management System");
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\tEnter the password to login:");
     scanf("%s",pass);
 
@@ -31,7 +50,6 @@ void main()
                 {
                     system("cls");
                     close();
-                    printf("Working close");
                 }
             else
                 {
