@@ -18,10 +18,12 @@
 void main()
 {
     char pass[20],password[20]="surya";
-    const int s_width = strlen("Bank Management System");
-    const int t = GetColumnWidth();
-    const int field_width = (t - s_width) / 2 + s_width;
-    printf("%*s\n", field_width, "Bank Management System");
+    title = "Bank Management System"
+    const int title_width = strlen(title);
+    const int screen_width = GetColumnWidth();
+    const int field_width = (screen_width - title_width) / 2 + title_width;
+    printf("%*s\n", field_width, title);
+    
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\tEnter the password to login:");
     scanf("%s",pass);
 
